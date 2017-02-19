@@ -1,5 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.reim.android'
+version = '1.0'
 
 android {
     compileSdkVersion 25
@@ -39,19 +43,4 @@ dependencies {
     })
 
     testCompile 'junit:junit:4.12'
-}
-
-def repo = new File(rootDir, "repository")
-
-apply plugin: 'maven'
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository url: "file://${repo.absolutePath}"
-            pom.version = '1.0.0'
-            pom.groupId = 'com.reim.android'
-            pom.artifactId = 'filterrecyclerview'
-        }
-    }
 }
