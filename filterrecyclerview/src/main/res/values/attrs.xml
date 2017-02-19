@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FilterRecyclerView">
+        <attr name="toolBarColor" format="color" />
+        <attr name="backDrawable" format="reference" />
+        <attr name="resetDrawable" format="reference" />
+        <attr name="filterHint" format="string" />
+    </declare-styleable>
+</resources>
